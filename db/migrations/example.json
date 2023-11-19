@@ -1,0 +1,31 @@
+{
+  "name": "example_migration",
+  "operations": [
+    {
+      "create_table": {
+        "name": "users",
+        "columns": [
+          {
+            "name": "id",
+            "type": "integer",
+            "pk": true
+          },
+          {
+            "name": "firstname",
+            "type": "varchar(255)"
+          },
+          {
+            "name": "lastname",
+            "type": "varchar(255)"
+          },
+          {
+            "name": "email",
+            "type": "varchar(255)",
+            "unique": true
+          }
+        ]
+      },
+      "sql": "ALTER TABLE users ENABLE ELECTRIC"
+    }
+  ]
+}
